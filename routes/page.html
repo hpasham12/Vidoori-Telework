@@ -20,8 +20,9 @@
         <button class="tablinks" onclick="openTab(event, 'Request Approval Status')">Telework Request Approval
             Status</button>
         <button class="tablinks" onclick="openTab(event, 'Record Telework Status')">Record Telework Status</button>
+        <button class="tablinks" onclick="openTab(event, 'Telework Reports')">Telework Reports</button>
     </div>
-
+    <div style="margin-left:310px" class="padding"></div>
     <div id="Submit Telework Request" class="tabcontent">
         <h3>Employee Telework Request</h3>
         <p>
@@ -87,14 +88,48 @@
             </form>
 
             <br>
-
+            <span class="label success">*Please remember to submit your telework request at least 48 hours before</span>
             <input type="submit">
 
     </div>
 
     <div id="Request Approval Status" class="tabcontent" style="display: none">
         <h3>Request Approval Status</h3>
-        <p>Request Approval Status Code.</p>
+        <p>
+            <head>
+           <style>
+           table {
+             border-collapse: collapse;
+             width: 100%;
+           }
+           
+           th, td {
+             text-align: left;
+             padding: 8px;
+           }
+           tr:nth-child(even) {background-color: #f2f2f2;}
+ 
+           </style>
+           </head>
+           <body>
+           <table>
+             <tr>
+             <th>Telework Date</th>
+             <th>Approval Status</th>
+             </tr>
+             <tr>
+             <td>03/16/2001</td>
+             <td>Approved</td>
+             </tr>
+             <tr>
+             <td>05/19/2005</td>
+             <td>Denied (please talk to your manager for further details)</td>
+             </tr>
+             <tr>
+             </tr>
+           </table>
+           </body>
+       </p>
     </div>
 
     <div id="Record Telework Status" class="tabcontent" style="display: none">
@@ -117,6 +152,12 @@
 
             <input type="submit">
     </div>
+
+    <div id="Telework Reports" class="tabcontent" style="display:none">
+        <h3>Telework Reports</h3>
+        <p>TELEWORK REPORTS CODE</p>
+    </div>
+
     <script>
         function openTab(evt, tabName) {
             var i, tabcontent, tablinks;
