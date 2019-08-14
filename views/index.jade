@@ -1,8 +1,20 @@
 extends layout
-
-block content
-  h1= title
-  p #{title} Telwork Request App
-  a(href="http://localhost:3000/users")
-   button(type="button") Login
-  
+html
+  head
+      meta(name='viewport', content='width=device-width, initial-scale=1')
+    body
+      block content
+        //.container
+        h2
+          img(src="https://www.cs.umd.edu/sites/default/files/styles/medium/public/images/partners/Vidoori%20Logo%20Vector%20Transparent-%20A.png?itok=i9TS3xiM", alt="pic")
+        h1 #{title} Telework Request
+            h2.form-signin-heading Please sign in
+            input.input-block-level(type="text", name="username", placeholder="Email")
+            br
+            input.input-block-level(type="password", name="password", placeholder="Password")
+            br
+            label.checkbox.
+              <input type="checkbox" value="remember-me"/> Remember me
+            br
+            a(href="http://localhost:3000/users")
+              button.btn.btn-primary(type="submit") Sign in
